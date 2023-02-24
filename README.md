@@ -11,8 +11,7 @@ películas que sea posible.
 # 1. Fuentes de datos:
 • Wallapop: los alumnos deberán elegir cuatro objetos de su elección y
 recolectar los siguientes datos:
-```
-{
+
 • Título del producto
 
 • Precio
@@ -20,22 +19,15 @@ recolectar los siguientes datos:
 • Descripción
 
 • Imágenes
-}
-```
-
 
 • Filmaffinity: los alumnos deberán recolectar los siguientes datos de
 películas de "horror" y "comedia" en español:
-```
-{
 
 • Título de la película
 
 • Género
 
 • Sinopsis
-}
-```
 
 # 2. Web scraping:
 
