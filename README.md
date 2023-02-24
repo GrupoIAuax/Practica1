@@ -22,8 +22,7 @@ películas de "horror" y "comedia" en español:
 • Los alumnos deberán utilizar técnicas de web scraping para recolectar
 los datos y las imágenes de Wallapop y Filmaffinity.
 • La práctica debe realizarse en Python.
-• Los datos y las imágenes recolectados deberán ser almacenados en el
-soporte que los alumnos consideren (por ejemplo, una base de datos,
+• Los datos y las imágenes recolectados deberán ser almacenados en el soporte que los alumnos consideren (por ejemplo, una base de datos,
 un archivo CSV o JSON).
 # 3. Cantidad
 • El objetivo en Wallapop es la recolección de al menos mil productos
