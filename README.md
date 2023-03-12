@@ -1,62 +1,48 @@
-## Objetivo: 
-El objetivo de esta práctica es la recolección de datos de dos fuentes
-diferentes (Wallapop y Filmaffinity) utilizando técnicas de web scraping. Se espera que
-los alumnos recolecten datos e imágenes de cuatro objetos (a su elección) en
-Wallapop y sinopsis, título y género de películas de "horror" y "comedia" en
-Filmaffinity, el contenido debe estar en. Español, se debe recolectar el máximo de
-películas que sea posible.
 
-### Instrucciones:
+# 1. Definir diccionarios
+Creamos dos diccionarios llamados headers y params para establecer las peticiones que queremos enviar, especificando entre otras cosas la provincia, la region, la ciudad... entre otros parametros.
 
-# 1. Fuentes de datos:
-• Wallapop: los alumnos deberán elegir cuatro objetos de su elección y
-recolectar los siguientes datos:
+![image](https://user-images.githubusercontent.com/113373670/224575219-492ffb45-bb20-4ea2-952e-69199dcab211.png)
 
-• Título del producto
 
-• Precio
+# 2. Definir, realizar y almacenar las búsquedas
+Creamos una lista vacía llamada "listaDefinitiva" donde guardaremos los resultados finales, también crearemos otra lista llamada búsquedas donde se podrá ver las 4 búsquedas que queremos realizar en wallapop y obtener todas las existencias de las mismas.
 
-• Descripción
+Por último se realiza un bucle para cada búsqueda de la lista, realizaremos un cambio en el parámetro "keyboard" dentro del diccionario params para que se vaya actualizando su valor a las 4 búsquedas que solicitamos. Después de cumplir los requisitos de peticiones a la api de wallapop almacenaremos las respuestas en listaDefinitiva.
 
-• Imágenes
+![image](https://user-images.githubusercontent.com/113373670/224575603-cfea589a-b106-4ef7-b77e-b52c4aef0e81.png)
 
-• Filmaffinity: los alumnos deberán recolectar los siguientes datos de
-películas de "horror" y "comedia" en español:
+# 3. Filtramos 
+Ahora mediante un bucle recorriendo la listaDefinitiva queremos establecer que solo queremos 4 parámetros de todo el contenido, que son:
+- Título
+- precio
+- Descripción
+- Imagenes
 
-• Título de la película
+![image](https://user-images.githubusercontent.com/113373670/224576619-4da41136-d368-4829-a6a0-58712283005f.png)
 
-• Género
+# 4. Mostrar los objetos
 
-• Sinopsis
+Mediante un bucle buscaremos un objeto entre 100 mostrando el título, precio y descripción para poder confirmar que encontramos las búsquedas.
 
-# 2. Web scraping:
+![image](https://user-images.githubusercontent.com/113373670/224577295-b05c00e4-6d8b-499b-a621-09d75c3a5d1b.png)
 
-• Los alumnos deberán utilizar técnicas de web scraping para recolectar
-los datos y las imágenes de Wallapop y Filmaffinity.
 
-• La práctica debe realizarse en Python.
+# 5. Imágenes
+Comprobamos que funciona.
 
-• Los datos y las imágenes recolectados deberán ser almacenados en el soporte que los alumnos consideren (por ejemplo, una base de datos,
-un archivo CSV o JSON).
+## Skate
 
-# 3. Cantidad
+![image](https://user-images.githubusercontent.com/113373670/224577388-fbfaf99f-baf2-430f-a897-2d95e2563ba5.png)
 
-• El objetivo en Wallapop es la recolección de al menos mil productos
-diferentes.
+## Mancuernas
 
-• El objetivo en Filmaffinity es la recolección del máximo de películas que
-sea posible.
+![image](https://user-images.githubusercontent.com/113373670/224577434-fcbddedb-fef9-4adc-9968-57bd6f742dd8.png)
 
-# 4. Entrega:
+## Piano
 
-• La entrega se evaluará mediante:
+![image](https://user-images.githubusercontent.com/113373670/224577459-2f2f05c7-1833-4162-b129-f37dc928a891.png)
 
-• La revisión del repositoro git.
+## Ratón
 
-• La revisión del cumplimento de los objetivos.
-
-• La revisión del flujo git que haya tenido el equipo.
-
-• Además, los equipos deberán presentar los resultados y comentar
-posibles aplicaciones prácticas de la recolección de datos mediante web
-scraping.
+![image](https://user-images.githubusercontent.com/113373670/224577479-811da595-64fd-412a-962d-ef2fe39015b2.png)
