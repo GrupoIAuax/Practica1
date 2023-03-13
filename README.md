@@ -1,4 +1,4 @@
-
+# WALLAPOP
 # 1. Definir diccionarios
 Creamos dos diccionarios llamados headers y params para establecer las peticiones que queremos enviar, especificando entre otras cosas la provincia, la region, la ciudad... entre otros parametros.
 
@@ -46,3 +46,38 @@ Comprobamos que funciona.
 ## Ratón
 
 ![image](https://user-images.githubusercontent.com/113373670/224577479-811da595-64fd-412a-962d-ef2fe39015b2.png)
+
+# FILMAFFINITY
+
+# 1. Crear listas, almacenar y parsear
+
+Creamos una lista llamada urls donde almacenamos las dos urls de de terror y comedia.
+Realizamos un for para parsear el html y vamos a guardar todos los links de las películas que obtenemos a la lista movie_links.
+Creamos un txt para guardar los links de las películas
+
+![image](https://user-images.githubusercontent.com/113373670/224581103-cb4486dd-4cea-471e-ad1a-9f9099b21f41.png)
+
+# 2. Filtrar las películas obtenidas
+
+Abrimos el txt que creamos previamente y mediante un for filtramos y extraemos solo:
+- Título
+- Género
+- Sinopsis
+
+![image](https://user-images.githubusercontent.com/113373670/224584898-3d3cd304-4ba2-4b82-a01d-45502140b783.png)
+
+# 3. Guardamos en .JSON
+
+Una vez ya obtenido las películas de terror y comedia, filtrar su contenido en función de lo que se nos pedía solo falta guardar el contenido en un .JSON y
+mostrar las películas para asegurar que funciona de forma correcta por pantalla
+
+![image](https://user-images.githubusercontent.com/113373670/224585146-0490a242-ce31-4e38-92fd-13c3ce9c0155.png)
+
+# 4. Películas
+
+## Terror
+![image](https://user-images.githubusercontent.com/113373670/224585375-8cc233e6-36c2-4cb5-9560-e253b2212623.png)
+
+## Comedia
+![image](https://user-images.githubusercontent.com/113373670/224585449-0678489e-ec4d-4f0a-b062-8bcc181f7e02.png)
+
