@@ -1,19 +1,23 @@
+# Memoria Practica 1
+En esta práctica hemos aprendido a utilizar varios métodos de web-scraping, también hemos aprendido a investigar y analizar como funciona una página de la cual queramos recolectar datos, para Wallapop estaremos usando su propia API mientras que para Filmaffinity haremos el scraping del propio html de la página.
+
+A continuación explicamos detalladamente nuestro código.
+
 # WALLAPOP
-# 1. Definir diccionarios
-Creamos dos diccionarios llamados headers y params para establecer las peticiones que queremos enviar, especificando entre otras cosas la provincia, la region, la ciudad... entre otros parametros.
+# 1. Parámetros
+Creamos dos diccionarios llamados headers y params para establecer los argumentos que enviaremos con la petición a la API de Wallapop, esos parámetros especificaran por ejemplo el lugar y rango para la búsqueda, entre otros.
+
 
 ![image](https://user-images.githubusercontent.com/113373670/224575219-492ffb45-bb20-4ea2-952e-69199dcab211.png)
 
 
-# 2. Definir, realizar y almacenar las búsquedas
-Creamos una lista vacía llamada "listaDefinitiva" donde guardaremos los resultados finales, también crearemos otra lista llamada búsquedas donde se podrá ver las 4 búsquedas que queremos realizar en wallapop y obtener todas las existencias de las mismas.
-
-Por último se realiza un bucle para cada búsqueda de la lista, realizaremos un cambio en el parámetro "keyboard" dentro del diccionario params para que se vaya actualizando su valor a las 4 búsquedas que solicitamos. Después de cumplir los requisitos de peticiones a la api de wallapop almacenaremos las respuestas en listaDefinitiva.
+# 2. Peticiones
+Creamos una lista vacía llamada "listaDefinitiva" donde guardaremos los datos que recibamos. Los 4 objetos que buscaremos serán: Mancuernas, Skate, Piano, Raton; por lo tanto, hacemos que nuestro código haga una llamada a la API por cada uno de estos, la API nos responderá con un json por cada llamada y nosotros iremos almacenando la información que contenga.
 
 ![image](https://user-images.githubusercontent.com/113373670/224575603-cfea589a-b106-4ef7-b77e-b52c4aef0e81.png)
 
 # 3. Filtramos 
-Ahora mediante un bucle recorriendo la listaDefinitiva queremos establecer que solo queremos 4 parámetros de todo el contenido, que son:
+A continuación recorreremos la listaDefinitiva para quedarnos solo con 4 parámetros de todo el contenido, que son:
 - Título
 - precio
 - Descripción
@@ -23,13 +27,11 @@ Ahora mediante un bucle recorriendo la listaDefinitiva queremos establecer que s
 
 # 4. Mostrar los objetos
 
-Mediante un bucle buscaremos un objeto entre 100 mostrando el título, precio y descripción para poder confirmar que encontramos las búsquedas.
+Para ver los datos que hemos recolectado de forma más visual usaremos principalmente la librería display de Python, enseñaremos una muestra de cada 100 para ver varios ejemplos de los datos recolectados.
 
 ![image](https://user-images.githubusercontent.com/113373670/224577295-b05c00e4-6d8b-499b-a621-09d75c3a5d1b.png)
 
-
-# 5. Imágenes
-Comprobamos que funciona.
+Y aquí están las muestras de nuestros datos:
 
 ## Skate
 
@@ -49,20 +51,19 @@ Comprobamos que funciona.
 
 # FILMAFFINITY
 
-# 1. Crear listas, almacenar y parsear
+# 1. Obtener peliculas
 
-Creamos una lista llamada urls donde almacenamos las dos urls de de terror y comedia.
-Realizamos un for para parsear el html y vamos a guardar todos los links de las películas que obtenemos a la lista movie_links.
-Creamos un txt para guardar los links de las películas
+En Filmaffinity nos encontramos con la siguiente problematica, existen listas de peliculas por genero de las cuales queremos obtener la informacion, pero en estas listas no esta dicha informacion, entonces debemos obtener los enlaces de donde se encuentren los datos que queremos los cuales seran los enlaces especificos de cada pelicula.
+
+Para scrapear los datos de Filmaffinity usaremos la libreria BeautifulSoup, usaremos esta libreria para recorrer el codigo html de dos urls las cuales estan especificadas en el codigo, estas urls son listas de peliculas de cada uno de los generos que vamos a buscar.
+
+Analizando el codigo html de Filmaffinity podemos encontrar las etiquetas del contenido que nos interesa, por lo tanto hacemos referencia a estas etiquetas en nuestro codigo para solo quedarnos con las urls de las demas peliculas.
 
 ![image](https://user-images.githubusercontent.com/113373670/224581103-cb4486dd-4cea-471e-ad1a-9f9099b21f41.png)
 
-# 2. Filtrar las películas obtenidas
+# 2. Obtener datos
 
-Abrimos el txt que creamos previamente y mediante un for filtramos y extraemos solo:
-- Título
-- Género
-- Sinopsis
+Ahora llamamos a todas las urls que hemos obtenido, y como previamente tambien hemos analizado la estructura html de estas pagina, sabemos que contenido es el que queremos guardarnos gracias a conocer las etiquetas del mismo
 
 ![image](https://user-images.githubusercontent.com/113373670/224584898-3d3cd304-4ba2-4b82-a01d-45502140b783.png)
 
