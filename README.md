@@ -90,4 +90,9 @@ Por último accedemos al json para mostrar las películas y asegurar que hemos g
 
 ![Captura de pantalla 2023-03-14 225216](https://user-images.githubusercontent.com/98824525/225148631-bd50dc11-c118-4317-853c-85bfe5f8bd01.png)
 
+# Inconvenientes
+
+A Wallapop no le gusta el scraping 🥲
+
+![Captura de pantalla (1)](https://user-images.githubusercontent.com/98824525/225151708-fddeb892-a793-496a-93ea-424485777dd8.png)
 
