@@ -92,7 +92,7 @@ Por último accedemos al json para mostrar las películas y asegurar que hemos g
 
 # Inconvenientes
 
-A Wallapop no le gusta el scraping 🥲
+A Filmaffinity no le gusta el scraping 🥲
 
 ![Captura de pantalla (1)](https://user-images.githubusercontent.com/98824525/225151708-fddeb892-a793-496a-93ea-424485777dd8.png)
 
